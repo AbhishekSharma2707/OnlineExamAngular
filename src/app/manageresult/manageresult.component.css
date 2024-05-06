@@ -1,0 +1,21 @@
+table,td,th
+{
+    border: 1px solid blueviolet;
+}
+
+td,th
+{
+    padding: 10px;
+}
+
+input[type='button']
+{
+    color: white;
+
+    font-size: 30px;
+
+    background-color: black;
+}
+
+
+

@@ -1,0 +1,53 @@
+
+<div class="bootstrap-wrapper" >
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-6 offset-md-3">
+
+                <mat-card >
+                <div class="container text-center">
+                    <!-- <img src="../.../../assets/signup.png" alt=""> -->
+                    <img src="../.../../assets/images/developer.png" alt="">
+                </div>
+
+                <h1 class="text-center">Login Here!!</h1>
+                <form>
+                    <!-- Username field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input required
+                        [(ngModel)]="user.username" name="username"
+                        matInput placeholder="Enter Your Username">
+                        
+                      </mat-form-field>
+                    
+                    <!-- Password field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input required
+                        [(ngModel)]="user.password" name="password"
+                        type="password" matInput placeholder="Enter Your Password">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Subject</mat-label>
+                            <select matNativeControl required name="subject" name="subject" [(ngModel)]="subject">
+                                <option *ngFor="let subject of subjects" value={{subject}}>{{subject}}</option>
+                            </select>
+                          </mat-form-field>
+            
+                    <div class="container text-center">
+                        <!-- <button type="submit" mat-raised-button color="primary">Register</button>
+                        <button class="ml10" mat-raised-button coloton> -->
+                        <!-- <input type="button" style="background: blue;" mat-raised-button color="primary" value="Register" (click)="saveToDB()"> -->
+                        <input type="button" style="background: rgb(255, 0, 212); border: none; font-size: large; color: white;" mat-raised-button color="primary" value="login" (click)="validate()">
+                        <input type="button" class="ml20" style="background-color: rgb(0, 255, 13); border: none; font-size: large;" mat-raised-button color="primary" value="Admin Login" (click)="validate2()">
+                      </div>
+                      <span style="color: brown;font-size: large;">{{message}}</span>
+
+                    </form>
+            </mat-card>
+        
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<span style="color: brown;font-size: large;"> Score is:{{score}}</span>
+
+<table>
+<tr>
+    <th>qno</th>
+    <th>question</th>
+    <th>submittedAnswer</th>
+    <th>correctAnswer</th>
+</tr>
+
+    
+<tr *ngFor="let answer of allAnswers" [style.background]="compare(answer.submittedAnswer,answer.correctAnswer)">
+
+    <td>{{answer.qno}}</td>
+    <td>{{answer.qtext}}</td>
+    <td>{{answer.submittedAnswer}}</td>
+    <td>{{answer.correctAnswer}}</td>
+</tr>
+
+</table>

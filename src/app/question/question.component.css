@@ -1,0 +1,13 @@
+img{
+    height: 100px;
+    width: 100px;
+}
+.full-width{
+    width: 100%;
+}
+
+select{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}

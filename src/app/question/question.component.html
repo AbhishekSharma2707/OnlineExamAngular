@@ -1,0 +1,68 @@
+<div class="bootstrap-wrapper" >
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-6 offset-md-3">
+
+                <!-- <mat-card > -->
+                <div class="container text-center">
+                    <!-- <img src="../.../../assets/signup.png" alt=""> -->
+                    <!-- <img src="../.../../assets/images/developer.png" alt=""> -->
+                </div>
+
+                <!-- <h1 class="text-center">Login Here!!</h1> -->
+               
+
+
+
+    
+    <span  style="color: brown;font-size: large;">{{message}}  </span>  Remaining Time:<span class="ml20"  style="color: brown;font-size: large;">{{durationMessage}}</span><br><br>
+   
+
+   Time Up:<span style="color: rgb(110, 42, 165);font-size: large;">{{maxtime}}</span>
+   <br><br>
+
+   <input type="button" style="background: rgb(255, 0, 212);" *ngFor="let qno of allQnos" value="{{qno}}" (click)="getQuestion($event)"><br><br>
+	
+<form>
+    
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Question No: </span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  name="qno" [(ngModel)]="question.qno">
+      </div><br><br>
+
+    <!-- <input type="text"  ><br><br> -->
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Questions  :  </span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  name="qtext" [(ngModel)]="question.qtext" size="50px" style="padding: 10px; color: blue; ">
+      </div><br><br>
+
+    <!-- <input type="text"     ><br><br> -->
+
+    
+      
+    <input  [checked]="isChecked(question.op1)" name="options" type="radio"  (change)="saveAnswer()"  value="{{question.op1}}" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected">   <span [style.color]="getColor(question.op1)">{{question.op1}}</span><br><br>
+    <input   [checked]="isChecked(question.op2)" name="options" type="radio" (change)="saveAnswer()"  value="{{question.op2}}" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected">   <span [style.color]="getColor(question.op2)">{{question.op2}}</span><br><br>
+    <input   [checked]="isChecked(question.op3)" name="options" type="radio"  (change)="saveAnswer()" value="{{question.op3}}" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected">   <span [style.color]="getColor(question.op3)">{{question.op3}}</span><br><br>
+    <input  [checked]="isChecked(question.op4)"  name="options" type="radio"  (change)="saveAnswer()" value="{{question.op4}}" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected">   <span [style.color]="getColor(question.op4)">{{question.op4}}</span><br><br>
+
+    <input  type="hidden" name="answer" [(ngModel)]="question.answer"><br>
+
+     <input class="ml20"  type="button" style="background: rgb(255, 0, 212); border: none; font-size: large; color: white;" value="next" (click)="nextQuestion()">
+    <input class="ml20" type="button"  style="background: rgb(0, 255, 170); border: none; font-size: large; color: white;" value="previous" (click)="previousQuestion()">
+    <input class="ml20"  type="button"  style="background: rgb(255, 217, 0); border: none; font-size: large; color: white;" value="endexam" (click)="endexam()"> 
+
+
+
+
+
+
+
+
+                    </form>
+            <!-- </mat-card> -->
+        
+            </div>
+        </div>
+    </div>
+</div>

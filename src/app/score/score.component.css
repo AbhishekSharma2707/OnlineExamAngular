@@ -1,0 +1,22 @@
+table,th,td{
+    border: 1px solid black;
+}
+th,td{
+    padding: 10px;
+}
+table{
+    margin: auto;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+.full-width{
+    width: 100%;
+}
+
+select{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
